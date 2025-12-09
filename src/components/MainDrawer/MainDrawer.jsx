@@ -20,34 +20,36 @@ import DrawerNavigationButton from "./DrawerNavigationButton.jsx";
 
 // Styles
 import MainDrawerStyle from "./MainDrawerStyle.js";
+import MainDrawerStyleMobile from "./MainDrawerStyleMobile.js";
 
 // Perfil
 import FotoPerfil from '../../assets/perfil.jpg';
 
 //Config
+import { useDevice } from '../../app/DeviceContext.jsx';
 import { useNavigate } from 'react-router-dom';
 import { routesConfig } from '../../routesConfig.js';
 
-const MainDrawer = ({ isOpen, toggleDrawer }) => {
 
+
+const MainDrawer = ({ isOpen, toggleDrawer }) => {
     const navigate = useNavigate();
+    const { isMobile } = useDevice();
+    const style = isMobile ? MainDrawerStyleMobile : MainDrawerStyle;
 
     return (
-
         <Drawer
             variant="permanent"
             open={isOpen}
             anchor="left"
-            sx={{ ...(isOpen ? MainDrawerStyle.DrawerOpened : MainDrawerStyle.DrawerCollapsed) }}
+            sx={isOpen ? style.DrawerOpened : style.DrawerCollapsed}
         >
-
-
-            <IconButton onClick={toggleDrawer} sx={{ ...(MainDrawerStyle.IconButton) }}                >
+            <IconButton onClick={toggleDrawer} sx={style.IconButton}>
                 {isOpen ? <ChevronLeftIcon /> : <MenuIcon />}
             </IconButton>
 
-            <Box sx={{ ...(MainDrawerStyle.DrawerAvatar) }}>
-                <AvatarBox isOpen={isOpen} />
+            <Box sx={style.DrawerAvatar}>
+                <AvatarBox isOpen={isOpen} style={style} />
             </Box>
 
             <Divider />
@@ -62,41 +64,37 @@ const MainDrawer = ({ isOpen, toggleDrawer }) => {
                     gap: '8px',
                 }}
             >
-
-                <DrawerNavigationButton icon={<routesConfig.home.icon />} label={routesConfig.home.label} onClick={() => navigate(routesConfig.home.path)} />
-                <DrawerNavigationButton icon={<routesConfig.projects.icon />} label={routesConfig.projects.label} onClick={() => navigate(routesConfig.projects.path)} />
-                <DrawerNavigationButton icon={<routesConfig.games.icon />} label={routesConfig.games.label} onClick={() => navigate(routesConfig.games.path)} />
-                <DrawerNavigationButton icon={<routesConfig.resume.icon />} label={routesConfig.resume.label} onClick={() => navigate(routesConfig.resume.path)} />
-                <DrawerNavigationButton icon={<routesConfig.aboutMe.icon />} label={routesConfig.aboutMe.label} onClick={() => navigate(routesConfig.aboutMe.path)} />
+                <DrawerNavigationButton isOpen={isOpen} icon={<routesConfig.home.icon />} label={routesConfig.home.label} onClick={() => { isMobile && toggleDrawer(); navigate(routesConfig.home.path);}} isSelected={location.pathname === routesConfig.home.path}/>
+                <DrawerNavigationButton isOpen={isOpen} icon={<routesConfig.projects.icon />} label={routesConfig.projects.label} onClick={() => { isMobile && toggleDrawer(); navigate(routesConfig.projects.path); }} isSelected={location.pathname === routesConfig.projects.path}/>
+                <DrawerNavigationButton isOpen={isOpen} icon={<routesConfig.games.icon />} label={routesConfig.games.label} onClick={() => { isMobile && toggleDrawer(); navigate(routesConfig.games.path); }} isSelected={location.pathname === routesConfig.games.path}/>
+                <DrawerNavigationButton isOpen={isOpen} icon={<routesConfig.resume.icon />} label={routesConfig.resume.label} onClick={() => { isMobile && toggleDrawer(); navigate(routesConfig.resume.path); }} isSelected={location.pathname === routesConfig.resume.path}/>
+                {/* <DrawerNavigationButton icon={<routesConfig.aboutMe.icon />} label={routesConfig.aboutMe.label} onClick={() => { isMobile && toggleDrawer(); navigate(routesConfig.aboutMe.path); }} isSelected={location.pathname === routesConfig.aboutMe.path}/> */}
             </Box>
         </Drawer >
-
     );
 }
 
 
-const AvatarBox = ({ isOpen }) => {
-    const avatarWidthOpen = 100;
-    const avatarWidthClosed = 50;
-    return (
-        <Box sx={{ ...(MainDrawerStyle.AvatarBox) }}>
 
+
+const AvatarBox = ({ isOpen, style = MainDrawerStyle }) => {
+    return (
+        <Box sx={style.AvatarBox}>
             <Avatar
                 src={FotoPerfil}
                 alt="Profile Avatar"
-                className={isOpen ? 'avatar-open' : 'avatar-closed'}
-                sx={{ ...(MainDrawerStyle.Avatar) }}
+                sx={isOpen ? { ...style.Avatar, width: 140, height: 140 } : { ...style.Avatar, width: 90, height: 90 }}
             />
-
             <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                <Typography variant="avatarText" sx={MainDrawerStyle.NameTextameText} className={isOpen ? 'avatar-open' : 'avatar-closed'}>
+
+                <Typography variant="avatarText" sx={isOpen ? style.NameText : { ...style.NameText, fontSize: '1em' }}>
                     Guilherme Peres
                 </Typography>
 
                 <Divider sx={{ width: '100%', margin: '8px 0' }} />
 
-                <Typography variant="avatarText" sx={MainDrawerStyle.JobText} className={isOpen ? 'avatar-open' : 'avatar-closed'}>
-                    Unity and Web Developer
+                <Typography variant="avatarText" sx={isOpen ? style.JobText : { ...style.JobText, fontSize: '.6em' }}>
+                    Frontend Developer
                 </Typography>
             </Box>
         </Box>

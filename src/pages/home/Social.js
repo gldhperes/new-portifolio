@@ -9,7 +9,7 @@ const Social = [
 
     {
         icon: EmailIcon,
-        url: "https://www.linkedin.com/in/guilherme-peres-2902a5251/",
+        url: "mailto:gldhperes@gmail.com",
         text:"E-Mail",
         className: "email"
     },

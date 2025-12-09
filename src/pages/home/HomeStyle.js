@@ -1,4 +1,3 @@
-
 const HomeStyle = {
 
     MainContainer: {
@@ -8,15 +7,21 @@ const HomeStyle = {
         flexDirection: 'column',
         justifyContent: 'flex-start',
         alignItems: 'flex-start',
-        
-        animation: "PagesAnimation ease .4s", 
+        gap: '30px',
+
+        // animation: "PagesAnimation ease .4s", 
     },
 
     SocialContainer: {
         display: 'flex',
-        flexDirection: 'row',
+        flexFlow: 'row wrap',
         alignItems: 'center',
-        gap: '10px',
+        gap: '15px',
+
+        "@media (max-width: 600px)": {
+            alignItems: 'center',
+            justifyContent: 'center',
+        },
     },
 
     SocialItem: {
@@ -27,7 +32,8 @@ const HomeStyle = {
         alignItems: 'center',
         gap: '8px',
         cursor: "pointer",
-        backgroundColor: 'primary.light',
+        // backgroundColor: 'primary.light',
+        backgroundColor: 'background.paper',
 
         borderRadius: '8px',
 
@@ -45,14 +51,18 @@ const HomeStyle = {
         }
     },
 
-    TypographyContainer: {
+    SubjectBox: {
         width: '100%',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'flex-start',
         justifyContent: 'flex-start',
-        gap: '20px',
+        gap: '40px',
 
+          "@media (max-width: 600px)": {
+            alignItems: 'center',
+            justifyContent: 'center',
+        },
     },
 
 };

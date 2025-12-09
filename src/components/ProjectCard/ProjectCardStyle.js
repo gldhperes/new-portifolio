@@ -1,10 +1,10 @@
 
-
 const ProjectCardStyle = {
     CardContainer: {
         width: 340,
-        height: 420,
-        backgroundColor: 'primary.main',
+        height: 390,
+        // backgroundColor: 'primary.main',
+        backgroundColor: 'background.paper',
         borderRadius: '18px',
         boxShadow: '0 4px 24px 0 rgba(18,18,18,0.25)',
         overflow: 'hidden',
@@ -15,8 +15,9 @@ const ProjectCardStyle = {
         transition: 'transform 0.2s cubic-bezier(.4,2,.6,1), box-shadow 0.2s',
 
         '&:hover': {
-            transform: 'translateY(-8px) scale(1.03)',
-            boxShadow: '0 10px 20px 0 rgb(0, 0, 0)',
+            transform: 'translateY(-10px) scale(1.03)',
+            // boxShadow: '0 10px 20px 0 rgb(0, 0, 0)',
+            boxShadow: `0px 0px 8px 0 white`,
         },
 
     },
@@ -57,8 +58,10 @@ const ProjectCardStyle = {
     },
 
     TechChip: {
-        color: 'text.primary',
-        backgroundColor: 'primary.light',
+        
+        color: 'primary.light',        
+        backgroundColor: 'primary.dark',
+
         borderRadius: '8px',
         padding: '2px 10px',
         fontSize: '0.85rem',
@@ -66,17 +69,22 @@ const ProjectCardStyle = {
         letterSpacing: 0.2,
     },
 
-    Actions: {
-        display: 'flex',
-        gap: '12px',
+    ActionButtonsContainer: {
+        width: '100%',
         padding: '0',
+
+        display: 'flex',
+        flexDirection: 'row',
+        gap: '12px',
     },
 
-    ActionsButton: {
-        backgroundColor: 'primary.light',
-        borderRadius: '8px',
-        fontWeight: 600,
+    Date: {
+        color: '#B9BBBE',
+        fontSize: '0.6rem',
+        
     },
+
+   
 
 };
 

@@ -1,44 +1,46 @@
-import { textFieldClasses } from "@mui/material";
-
-const DrawerAvatar = {
-    minWidth: 0,
-    padding: 0,
-
-    background: 'none',
-    boxShadow: 'none',
-
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-};
-
-
-const drawer = {
-
+const MainDrawer = {
     height: '100%',
     whiteSpace: 'nowrap',
-    boxSizing: 'border-box',
     flexShrink: 0,
-    transition: 'width 0.3s ease',
+    transition: 'all 3s ease',
+    // overflow: 'visible',
+};
 
-
-    '& .MuiDrawer-paper': {
-        backgroundColor: "primary.main",
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'flex-start',
-        gap: '16px',
-
-        padding: '70px 10px',
-        transition: 'width 0.3s ease',
-        overflow: 'visible',
-    },
+const DrawerPaperStyle = {
+    backgroundColor: 'primary.main',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    gap: '16px',
+    padding: '70px 10px',
+    transition: 'all 0.3s ease',
+    overflow: 'visible',
 }
 
-
 const MainDrawerStyle = {
-    DrawerAvatar,
+    DrawerAvatar: {
+        minWidth: 0,
+        padding: 0,
+        background: 'none',
+        boxShadow: 'none',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+
+    DrawerNavButton: {
+        marginBottom: 8,
+        fontWeight: 500,
+        fontSize: '1em',
+        textTransform: 'none',
+        borderRadius: 8,
+        transition: 'all 0.3s',
+        '&:hover': {
+            backgroundColor: '#36393E',
+            color: '#F8AF0A',
+        },
+    },
 
     AvatarBox: {
         display: 'flex',
@@ -51,90 +53,62 @@ const MainDrawerStyle = {
     },
 
     DrawerOpened: {
-        ...drawer,
+        ...MainDrawer,
+
         '& .MuiDrawer-paper': {
-            ...drawer['& .MuiDrawer-paper'],
-            width: '300px',
+            ...DrawerPaperStyle,
+            width: '300px', // Desktop: largura fixa
         },
     },
 
     DrawerCollapsed: {
-        ...drawer,
+        ...MainDrawer,
 
-        transition: 'all 0.3s ease',
         '& .MuiDrawer-paper': {
-            ...drawer['& .MuiDrawer-paper'],
+            ...DrawerPaperStyle,
             width: '150px',
         },
-
         '& .MuiButton-root': {
             display: 'flex',
-
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
             fontSize: '0.5em',
-
-            "& .MuiButton-icon": {
+            '& .MuiButton-icon': {
                 margin: 0,
-            }
+            },
         },
     },
 
-    IconButton:
-    {
-
+    IconButton: {
         width: 40,
         height: 40,
-
         position: 'absolute',
         top: 20,
         right: -20,
         zIndex: 2,
-
-        color: 'text.secondary',
-        backgroundColor: 'secondary.light',
-        // borderColor: 'secondary.main',
+        color: "primary.light",
+        backgroundColor: 'background.paper',
+        border: '1px solid',
+        boxShadow: `0 0 5px #3fd7ff`,
 
         '&:hover': {
-            color: 'text.primary',
-            backgroundColor: 'primary.light',
-            border: "1px solid",
+            color: "warning.main",
+            backgroundColor: '#424549',
+            boxShadow: `0 0 5px #ffb50a`,
         },
-
     },
-
-    Avatar:
-    {
+    Avatar: {
         transition: 'all 0.3s ease',
-
-        '&.avatar-open': {
-            width: 140,
-            height: 140,
-        },
-
-        '&.avatar-closed': {
-            width: 90,
-            height: 90,
-        },
-
     },
-
     NameText: {
         fontSize: '22px',
-
-        '&.avatar-closed': {
-            fontSize: '1em',
-        },
+        // fontFamily: 'Aurebesh', 
     },
-
     JobText: {
         fontSize: '.7em',
-        '&.avatar-closed': {
-            fontSize: '.6em',
-        },
+        // fontFamily: 'Aurebesh',
     },
-
 };
 
 export default MainDrawerStyle;

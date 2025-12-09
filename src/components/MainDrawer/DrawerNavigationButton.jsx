@@ -1,15 +1,17 @@
 import { Button } from '@mui/material'
 
-const DrawerNavigationButton = ({ icon, label, onClick }) => {
+const DrawerNavigationButton = ({ icon, label, onClick, isSelected, isOpen }) => {
     return (
         <Button
             variant='drawerButton'
             startIcon={icon}
             onClick={onClick}
-            fullWidth={true}
+            // fullWidth={true}
+            aria-selected={isSelected}
+            data-drawer-open={isOpen}
         >
             <span>{label}</span>
-            
+
         </Button >
     )
 }

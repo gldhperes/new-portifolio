@@ -3,12 +3,12 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/new-portifolio/',
+  base: '/',
   plugins: [react()],
   build: {
     outDir: 'build', // Output directory
-    rollupOptions: {
-      external: ['react-router-dom'],
-    }
+    // rollupOptions: {
+    //   external: ['react-router-dom'],
+    // }
   }
 })

@@ -7,7 +7,8 @@ const skills = [
   },
   {
     name: 'NodeJS',
-    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg',
+    // src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg',
+    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-plain-wordmark.svg',
     alt: 'NodeJS',
   },
   {
@@ -21,16 +22,6 @@ const skills = [
     alt: 'Javascript',
   },
   {
-    name: 'PostgreSQL',
-    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original-wordmark.svg',
-    alt: 'PostgreSQL',
-  },
-  {
-    name: 'MongoDB',
-    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-plain-wordmark.svg',
-    alt: 'MongoDB',
-  },
-  {
     name: 'Git',
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
     alt: 'Git',
@@ -39,16 +30,6 @@ const skills = [
     name: 'Unity',
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-plain.svg",
     alt: 'Unity',
-  },
-  {
-    name: 'C#',
-    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg',
-    alt: 'C#',
-  },
-  {
-    name: 'Prisma',
-    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg',
-    alt: 'Prisma',
   },
 ];
 
