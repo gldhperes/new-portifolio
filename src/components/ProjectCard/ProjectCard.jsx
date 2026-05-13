@@ -16,8 +16,8 @@ import ProjectCardStyle from './ProjectCardStyle';
 
 
 const ProjectCard = ({ project, openProject }) => {
-    
-    const { isMobile } = useDevice();
+
+    const { isMobile } = useDevice();    
 
     if (!project || project.length === 0) return null;
 

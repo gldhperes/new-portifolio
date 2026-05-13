@@ -11,7 +11,29 @@ import GPeresAnalyticsImg from '../../assets/GPeresAnalytics.png';
 import eventHorizonImg from '../../assets/event_horizon.png';
 import modosGregosImg from '../../assets/modos_gregos.png';
 import pokeRouletteImg from '../../assets/poke-roulette.png';
+import yellouHubImg from '../../assets/YellouHub.png';
 
+const YELLOUHUB_PROJECT = new Project(
+    'YellouHub',
+    'A platform that connects professionals and clients for a wide range of services.',
+    yellouHubImg, // Project image import
+    ['React', 'TypeScript', 'TailwindCSS'],
+    'https://yellouhub.netlify.app/',
+    '05/2026',
+    'present',
+    // about (Long Description)
+    'YellouHub is a platform designed to facilitate the connection between freelance professionals and clients looking for services across various categories, such as Design, Development, Marketing, Consulting, Maintenance, and more. The website offers search functionality, filtering by category, location, and price range, as well as detailed service pages with reviews and provider information. The interface is intuitive and responsive, focused on delivering a smooth user experience for both service providers and clients.',
+    // role (Your responsibility)
+    'I am responsible for the full frontend development of the application, including layout, UI/UX design, performance optimization, and overall user experience.'
+    // implementation (Technical details and responsibilities)
+    [
+        'Developed the frontend architecture using React and TypeScript.',
+        'Implemented a responsive layout and user interface design (UI/UX) with TailwindCSS.',
+        'Optimized performance to ensure fast loading times and smooth interactions.',
+        'Managed global state and application contexts using useContext.',
+        'Structured mocked data with plans for future integration with a Node.js backend and PostgreSQL database.'
+    ],
+);
 
 // 1. CSS-FX
 const CSSFX = new Project(
@@ -189,10 +211,12 @@ const ESCOLA_GP = new Project(
 );
 
 // Adiciona uma propriedade customizada para destacar projetos principais
+YELLOUHUB_PROJECT.isMain = true;
 CSSFX.isMain = true;
-YT_CLONE.isMain = true;
+// YT_CLONE.isMain = true;
 
 const projects = [
+    YELLOUHUB_PROJECT,
     CSSFX,
     YT_CLONE,
     GPeresAnalytics,

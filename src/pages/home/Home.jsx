@@ -9,6 +9,7 @@ import ProjectsStyle from "../Projects/ProjectsStyle.js";
 import SkillsCarousel from '../../components/SkillsCarousel/SkillsCarousel.jsx';
 import ProjectCard from "../../components/ProjectCard/ProjectCard.jsx";
 
+
 // JS
 import Social from "./Social.js";
 import MainProjects from "./MainProjects.js";
@@ -16,22 +17,27 @@ import { useDevice } from "../../app/DeviceContext.jsx";
 
 const Home = () => {
   const { isMobile } = useDevice();
+  const openProject = (_id, _project) => {
+    navigate(`/projects/${_id}`, { state: { project: _project } });
+  }
+console.log(MainProjects);
+
   return (
     <Box sx={{ ...(HomeStyle.MainContainer) }}    >
 
       <Box sx={{ ...(HomeStyle.SubjectBox) }}>
 
-        <Typography variant="h5" style={{ width: isMobile && '100%', textAlign: isMobile && 'center'  }} >
+        <Typography variant="h5" style={{ width: isMobile && '100%', textAlign: isMobile && 'center' }} >
           Hello There!
         </Typography>
 
-        <Typography style={{ textAlign: isMobile && 'center'  }} >
+        <Typography style={{ textAlign: isMobile && 'center' }} >
           I'm Guilherme Peres, a web and game developer from Ceará, Brazil.
           Here, I show you what I have been working on and share more about my education and career path.
         </Typography>
 
 
-        <Typography style={{ textAlign: isMobile && 'center'  }}>
+        <Typography style={{ textAlign: isMobile && 'center' }}>
           I’m always up for a challenge, and looking for meaningful projects, so please get in touch.
           You can find my contacts and informations below.
         </Typography>
@@ -67,8 +73,11 @@ const Home = () => {
           Featured Projects
         </Typography>
 
+        
         <Box sx={isMobile ? ProjectsStyle.ProjectsContainerMobile : ProjectsStyle.ProjectsContainer}>
-          <ProjectCard projects={MainProjects} />
+          {MainProjects.map((_pjt, index) => {
+            return <ProjectCard project={_pjt} openProject={openProject} key={index} />
+          })}
         </Box>
 
       </Box>
