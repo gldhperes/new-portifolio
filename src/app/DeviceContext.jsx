@@ -5,7 +5,7 @@ const DeviceContext = createContext({ isMobile: false });
 export function DeviceProvider({ children }) {
   function checkIsMobile() {
     const isMobile = /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    const isSmallScreen = window.innerWidth < 600;
+    const isSmallScreen = window.innerWidth < 900;
     // console.log('isMobile:', isMobile );
     // console.log('isSmallScreen:', isSmallScreen );
     return isMobile || isSmallScreen;

@@ -70,8 +70,23 @@ const MainDrawerStyleMobile = {
     },
 
     IconButton: {
-        display: 'none',
-    }
+        width: 50,
+        height: 50,
+        position: 'absolute',
+        top: 40,
+        left: 40,
+        zIndex: 3,
+        color: "primary.light",
+        backgroundColor: 'background.paper',
+        border: '1px solid',
+        boxShadow: `0 0 5px #3fd7ff`,
+
+        '&:hover': {
+            color: "warning.main",
+            backgroundColor: '#424549',
+            boxShadow: `0 0 5px #ffb50a`,
+        },
+    },
 };
 
 export default MainDrawerStyleMobile;

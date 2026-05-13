@@ -27,7 +27,7 @@ const AppStyle = {
         ...MainBox,
 
         // so aplicar esse padding se a tela for maior que 600px
-        '@media (min-width: 600px)': {
+        '@media (min-width: 900px)': {
             paddingLeft: '400px',
         },
     },
@@ -36,7 +36,7 @@ const AppStyle = {
         ...MainBox,
 
         // so aplicar esse padding se a tela for maior que 600px
-        '@media (min-width: 600px)': {
+        '@media (min-width: 900px)': {
             paddingLeft: '250px',
         },
     },

@@ -11,9 +11,8 @@ const ProjectInfoStyle = {
 
     MainImage: {
         width: '800px',
-        height: '400px',
-        objectFit: 'contain',
-        borderRadius: '0',
+        height: '400px',   
+        borderRadius: '20px',
     },
 
     DevelopedByContainer: {

@@ -2,13 +2,6 @@ import StarBorderIcon from '@mui/icons-material/StarBorder';
 import StarIcon from '@mui/icons-material/Star';
 
 const resumeData = {
-    about: "Sou um profissional de tecnologia com experiência em desenvolvimento front-end e criação de jogos usando Unity. Tenho projetos práticos, já trabalhei com diversas tecnologias modernas e estou em busca de oportunidades para atuar com desenvolvimento web ou de jogos.",
-
-    objective: [
-        "Desenvolvedor Front-end",
-        "Desenvolvedor de Jogos em Unity"
-    ],
-
     experience: [
         {
             period: "Jan 2025 - present",
@@ -31,12 +24,7 @@ const resumeData = {
             company: "Orion Soluções Tecnológicas",
             description: "Development of websites and pages using HTML, CSS, and JavaScript."
         },
-        {
-            period: "Jan 2015 - Jan 2019",
-            role: "General and Operations Manager",
-            company: "P3 Segurança Eletrônica",
-            description: "Management of operations, finance, hiring, installation of cameras and alarms."
-        },
+       
     ],
 
     education: [
