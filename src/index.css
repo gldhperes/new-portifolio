@@ -31,6 +31,14 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --black: #0a0d12;
+  --dark: #181c22;
+  --main: #232a34f0;
+  --blueSoft: #3fd7ff;
+  --orange: #ffb50a;
+  --handler: #adadad;
+  --saber-config: linear-gradient(to bottom, transparent 0%, transparent 75%, var(--main) 75%, var(--main) 100%);
 }
 
 body {
