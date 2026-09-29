@@ -46,7 +46,7 @@ const App = () => {
   // Gera o título da página a partir do path
   const getPageTitle = (path) => {
     if (path === '/' || path === '') return '';
-    // Pega só o primeiro segmento após a barra
+    // Pega só o primeiro segmento apos a barra
     const firstSegment = path.replace(/^\//, '').split('/')[0];
     if (!firstSegment) return '';
     return firstSegment.charAt(0).toUpperCase() + firstSegment.slice(1);
