@@ -28,7 +28,6 @@ const MOODY = new Project(
   ],
 );
 
-
 const ABYSS_HUNTERS = new Project(
   'Abyss Hunters',
   'Online Action RPG inspired by Monster Hunter and Dauntless.',
