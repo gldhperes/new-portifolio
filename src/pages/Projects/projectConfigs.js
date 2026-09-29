@@ -242,9 +242,8 @@ const ESCOLA_GP = new Project(
 );
 
 // Adiciona uma propriedade customizada para destacar projetos principais
+GADIOLI_STUDIOS.isMain = true;
 YELLOUHUB_PROJECT.isMain = true;
-CSSFX.isMain = true;
-// YT_CLONE.isMain = true;
 
 const projects = [
     GADIOLI_STUDIOS,
