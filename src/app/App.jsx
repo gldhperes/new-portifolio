@@ -11,7 +11,8 @@ import MainDrawer from '../components/MainDrawer/MainDrawer.jsx'
 import Particles from '../components/Particles/Particles.jsx';
 
 // PAGES
-import Home from '../pages/Home/Home.jsx'
+
+import Home from '../pages/Home/Home.jsx';
 import Projects from '../pages/Projects/Projects.jsx';
 import Games from '../pages/Games/Games.jsx';
 import Resume from '../pages/Resume/Resume.jsx';
