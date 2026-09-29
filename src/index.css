@@ -74,3 +74,129 @@ body {
   }
 
 }
+
+
+/* ===================== */
+/* SCROLLBAR STYLES */
+/* ===================== */
+
+/* largura da scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+  overflow: visible;
+}
+
+/* trilha */
+::-webkit-scrollbar-track {
+  background:
+    linear-gradient(90deg,
+      var(--black),
+      var(--dark) 45%,
+      #2a3038 50%,
+      var(--dark) 55%,
+      var(--black));
+  border-radius: 999px;
+  overflow: visible;
+}
+
+
+
+
+/* thumb com efeito de sabre */
+::-webkit-scrollbar-thumb {
+
+  border-radius: 999px;
+
+  background:
+    var(--saber-config),
+
+    linear-gradient(90deg,
+      rgba(63, 215, 255, 0.15) 0%,
+
+      var(--blueSoft) 25%,
+      var(--blueSoft) 50%,
+      var(--blueSoft) 75%,
+
+      rgba(63, 215, 255, 0.15) 100%);
+
+  box-shadow:
+    0 0 8px var(--blueSoft),
+    0 0 16px var(--blueSoft),
+    inset 0 0 1px rgba(255, 255, 255, 1),
+    0 0 10px var(--blueSoft);
+  ;
+
+}
+
+
+
+/* hover com energia laranja */
+::-webkit-scrollbar-thumb:hover {
+  
+  /* background:
+
+    var(--saber-config),
+
+
+    linear-gradient(90deg,
+      rgba(255, 181, 10, 0.15) 0%,
+      rgba(255, 181, 10, 0.85) 25%,
+      var(--orange) 50%,
+      rgba(255, 181, 10, 0.85) 75%,
+      rgba(255, 181, 10, 0.15) 100%);
+
+  box-shadow:
+    0 0 8px var(--orange),
+    0 0 16px var(--orange),
+    inset 0 0 1px rgba(255, 255, 255, 1),
+    0 0 10px var(--orange);
+  ; */
+
+  /* animation: saberPulse .4s ease-in-out forwards; */
+}
+
+@keyframes saberPulse {
+  0% {
+    background:
+      var(--saber-config),
+
+      linear-gradient(90deg,
+        rgba(63, 215, 255, 0.15) 0%,
+
+        var(--blueSoft) 25%,
+        var(--blueSoft) 50%,
+        var(--blueSoft) 75%,
+
+        rgba(63, 215, 255, 0.15) 100%);
+
+    box-shadow:
+      0 0 8px var(--blueSoft),
+      0 0 16px var(--blueSoft),
+      inset 0 0 1px rgba(255, 255, 255, 1),
+      0 0 10px var(--blueSoft);
+    ;
+  }
+
+
+
+  100% {
+    background:
+
+      var(--saber-config),
+
+
+      linear-gradient(90deg,
+        rgba(255, 181, 10, 0.15) 0%,
+        rgba(255, 181, 10, 0.85) 25%,
+        var(--orange) 50%,
+        rgba(255, 181, 10, 0.85) 75%,
+        rgba(255, 181, 10, 0.15) 100%);
+
+    box-shadow:
+      0 0 8px var(--orange),
+      0 0 16px var(--orange),
+      inset 0 0 1px rgba(255, 255, 255, 1),
+      0 0 10px var(--orange);
+    ;
+  }
+}

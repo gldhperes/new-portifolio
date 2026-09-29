@@ -12,6 +12,37 @@ import eventHorizonImg from '../../assets/event_horizon.png';
 import modosGregosImg from '../../assets/modos_gregos.png';
 import pokeRouletteImg from '../../assets/poke-roulette.png';
 import yellouHubImg from '../../assets/YellouHub.png';
+import GadioliImg from '../../assets/Gadioli.png';
+
+const GADIOLI_STUDIOS = new Project(
+    'Gadioli Studios',
+    'A digital studio platform selling promotional designs for restaurants and party invitations.',
+    GadioliImg,
+    ['React', 'TypeScript', 'CSS'],
+    'https://gadiolistudios.netlify.app/',
+    '08/2026',
+    '09/2026',
+
+    // about (Long Description)
+    'Gadioli Studios is a digital platform focused on selling ready-made party invitation templates and creating promotional designs for restaurants. Customers can browse invitations by category, preview available designs, select a model, and request basic changes such as the celebrant’s name, date, time, and address. The platform also provides promotional image solutions for restaurants, including visual content designed for menus, social media, and other marketing materials. The website was designed to provide a simple and intuitive purchasing experience, with a responsive interface and a streamlined order process.',
+
+    // role (Your responsibility)
+    'I am responsible for the full development of the platform, including frontend architecture, UI implementation, responsive design, product and category organization, order flow, and the overall user experience.',
+
+    // implementation (Technical details and responsibilities)
+    [
+        'Developed the frontend application using React and TypeScript.',
+        'Created a responsive and reusable UI system for displaying invitation templates and promotional designs.',
+        'Implemented categorized model browsing and filtering functionality for different invitation types.',
+        'Developed reusable components for model cards, galleries, product details, and the order form.',
+        'Implemented the purchase flow, allowing customers to select a template and submit their event information.',
+        'Integrated Pix payment instructions and proof-of-payment submission into the order process.',
+        'Implemented client-side form validation and interactive feedback throughout the ordering experience.',
+        'Structured the project using reusable data models and components to make it easier to add new invitation categories and designs.',
+        'Designed the interface with a focus on responsive layouts, visual consistency, and a simple customer experience.',
+        'Deployed the application using Netlify with a custom domain configuration.'
+    ]
+);
 
 const YELLOUHUB_PROJECT = new Project(
     'YellouHub',
@@ -27,11 +58,11 @@ const YELLOUHUB_PROJECT = new Project(
     'I am responsible for the full frontend development of the application, including layout, UI/UX design, performance optimization, and overall user experience.'
     // implementation (Technical details and responsibilities)
     [
-        'Developed the frontend architecture using React and TypeScript.',
-        'Implemented a responsive layout and user interface design (UI/UX) with TailwindCSS.',
-        'Optimized performance to ensure fast loading times and smooth interactions.',
-        'Managed global state and application contexts using useContext.',
-        'Structured mocked data with plans for future integration with a Node.js backend and PostgreSQL database.'
+    'Developed the frontend architecture using React and TypeScript.',
+    'Implemented a responsive layout and user interface design (UI/UX) with TailwindCSS.',
+    'Optimized performance to ensure fast loading times and smooth interactions.',
+    'Managed global state and application contexts using useContext.',
+    'Structured mocked data with plans for future integration with a Node.js backend and PostgreSQL database.'
     ],
 );
 
@@ -216,6 +247,7 @@ CSSFX.isMain = true;
 // YT_CLONE.isMain = true;
 
 const projects = [
+    GADIOLI_STUDIOS,
     YELLOUHUB_PROJECT,
     CSSFX,
     YT_CLONE,

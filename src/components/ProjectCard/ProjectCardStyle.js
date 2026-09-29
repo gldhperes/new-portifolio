@@ -2,7 +2,7 @@
 const ProjectCardStyle = {
     CardContainer: {
         width: 340,
-        height: 390,
+        height: 420,
         // backgroundColor: 'primary.main',
         backgroundColor: 'background.paper',
         borderRadius: '18px',

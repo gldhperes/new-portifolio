@@ -1,3 +1,5 @@
+import { useNavigate } from 'react-router-dom';
+
 // MUI
 import { Box, Divider, Typography, Link, Button } from "@mui/material";
 
@@ -9,7 +11,6 @@ import ProjectsStyle from "../Projects/ProjectsStyle.js";
 import SkillsCarousel from '../../components/SkillsCarousel/SkillsCarousel.jsx';
 import ProjectCard from "../../components/ProjectCard/ProjectCard.jsx";
 
-
 // JS
 import Social from "./Social.js";
 import MainProjects from "./MainProjects.js";
@@ -17,6 +18,9 @@ import { useDevice } from "../../app/DeviceContext.jsx";
 
 const Home = () => {
   const { isMobile } = useDevice();
+
+  const navigate = useNavigate();
+  
   const openProject = (_id, _project) => {
     navigate(`/projects/${_id}`, { state: { project: _project } });
   }

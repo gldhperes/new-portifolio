@@ -27,8 +27,30 @@ const MOODY = new Project(
     'Collaboration with the QA team to identify and resolve critical bugs.'
   ],
 );
-MOODY.isMain = true;
-MOODY.isProfessional = true;
+
+
+const ABYSS_HUNTERS = new Project(
+  'Abyss Hunters',
+  'Online Action RPG inspired by Monster Hunter and Dauntless.',
+  gnomeBusterImg,
+  ['Unity', 'Photon Fusion 2', 'PlayFab'],
+  '',
+  '02/2026',
+  'present',
+  'Abyss Hunters is an online multiplayer Action RPG heavily inspired by Monster Hunter and Dauntless. Players hunt massive elemental creatures known as Behemoths, gather resources, craft equipment, and create specialized builds to tackle increasingly challenging encounters. The project is being developed with a server-authoritative multiplayer architecture using Photon Fusion 2 and is designed from the ground up to support future migration to dedicated servers.',
+  'As the sole developer, I am responsible for the entire project architecture, gameplay systems, networking, UI framework, and progression systems. The main focus is building a scalable and maintainable codebase capable of supporting a persistent online experience. Significant effort has been invested in multiplayer synchronization, combat systems, inventory management, build customization, and data-driven game architecture.',
+  [
+    'Design and implementation of a server-authoritative multiplayer architecture using Photon Fusion 2.',
+    'Development of a modular combat system featuring weapon movesets, damage calculation, monster parts, and status effects.',
+    'Creation of a complete inventory, equipment, crafting, and progression system inspired by hunting RPGs.',
+    'Implementation of a data-driven architecture using ScriptableObjects, services, runtime data layers, and MVVM patterns.',
+    'Development of responsive and scalable user interfaces using Unity UI Toolkit.',
+    'Integration planning with PlayFab for player profiles, progression persistence, inventory validation, and cloud-based services.',
+    'Creation of Behemoth AI systems, drop tables, reward pipelines, and multiplayer loot distribution.',
+    'Architecture designed to support future dedicated server deployment with strong separation between client and server responsibilities.',
+    'Optimization of network traffic, gameplay replication, and synchronization for online cooperative gameplay.'
+  ],
+);
 
 const GNOME_BUSTER = new Project(
   'Gnome Buster',
@@ -48,7 +70,6 @@ const GNOME_BUSTER = new Project(
     'Packaging and deployment of the game to itch.io (HTML5 build).'
   ],
 );
-GNOME_BUSTER.isMain = true;
 
 const GOGYM = new Project(
   '2D Online RPG Tycoon Game (GoGym)',
@@ -127,12 +148,14 @@ const HEURISTIC_SEARCH = new Project(
 );
 
 // Adiciona uma propriedade customizada para destacar projetos principais
+
 MOODY.isMain = true;
 MOODY.isProfessional = true;
-GNOME_BUSTER.isMain = true;
+ABYSS_HUNTERS.isMain = true;
 
 const games = [
   MOODY,
+  ABYSS_HUNTERS,
   GNOME_BUSTER,
   GOGYM,
   ADA,
