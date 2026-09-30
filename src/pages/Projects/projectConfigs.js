@@ -19,7 +19,7 @@ const GADIOLI_STUDIOS = new Project(
     'A digital studio platform selling promotional designs for restaurants and party invitations.',
     GadioliImg,
     ['React', 'TypeScript', 'CSS'],
-    'https://gadiolistudios.netlify.app/',
+    'https://gadiolistudios.com.br',
     '08/2026',
     '09/2026',
 
