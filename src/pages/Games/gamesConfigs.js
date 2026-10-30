@@ -8,6 +8,7 @@ import kmeansImg from '../../assets/kmeans.png';
 import buscaHeuristicaImg from '../../assets/Busca Heuristica.png';
 import goGymImg from '../../assets/GoGym.png';
 import gnomeBusterImg from '../../assets/GnomeBuster.png';
+import abyssHunters from '../../assets/AbyssHuntersConceptArt.png';
 
 const MOODY = new Project(
   'Moody Madness',
@@ -31,9 +32,9 @@ const MOODY = new Project(
 const ABYSS_HUNTERS = new Project(
   'Abyss Hunters',
   'Online Action RPG inspired by Monster Hunter and Dauntless.',
-  gnomeBusterImg,
+  abyssHunters,
   ['Unity', 'Photon Fusion 2', 'PlayFab'],
-  '',
+  'https://abysshuntersdevlog.netlify.app/',
   '02/2026',
   'present',
   'Abyss Hunters is an online multiplayer Action RPG heavily inspired by Monster Hunter and Dauntless. Players hunt massive elemental creatures known as Behemoths, gather resources, craft equipment, and create specialized builds to tackle increasingly challenging encounters. The project is being developed with a server-authoritative multiplayer architecture using Photon Fusion 2 and is designed from the ground up to support future migration to dedicated servers.',

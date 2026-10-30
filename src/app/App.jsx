@@ -117,7 +117,7 @@ const App = () => {
           © {new Date().getFullYear()} Guilherme Peres. All rights reserved.
         </Typography>
         <Typography variant="body2" align="center">
-          Made using React and MUI.
+          Made using React and Material UI.
         </Typography>
       </Box >
 
