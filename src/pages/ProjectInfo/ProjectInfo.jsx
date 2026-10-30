@@ -95,13 +95,13 @@ const ProjectInfo = () => {
       {/* DEVELOPED BY */}
       <Box sx={{ ...(ProjectInfoStyle.DevelopedByContainer) }}>
 
-        <Box sx={{ ...(ProjectInfoStyle.DevelopedBy) }}>
+        {/* <Box sx={{ ...(ProjectInfoStyle.DevelopedBy) }}>
           <Typography align="left" variant="p">
             Developed by:
           </Typography>
 
           <Avatar src="" alt="" />
-        </Box>
+        </Box> */}
 
         <Box sx={{ ...(ProjectInfoStyle.DevelopedTools) }}>
           <Typography align="left" variant="p">
