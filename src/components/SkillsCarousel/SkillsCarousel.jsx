@@ -3,7 +3,6 @@ import { Box, Typography } from "@mui/material";
 // SKILLS DATA
 import skills from "./skills.js";
 
-
 // STYLES
 import SkillsCarouselStyle from "./SkillsCarouselStyle.js";
 

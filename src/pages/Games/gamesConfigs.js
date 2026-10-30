@@ -149,13 +149,13 @@ const HEURISTIC_SEARCH = new Project(
 
 // Adiciona uma propriedade customizada para destacar projetos principais
 
+ABYSS_HUNTERS.isMain = true;
 MOODY.isMain = true;
 MOODY.isProfessional = true;
-ABYSS_HUNTERS.isMain = true;
 
 const games = [
-  MOODY,
   ABYSS_HUNTERS,
+  MOODY,
   GNOME_BUSTER,
   GOGYM,
   ADA,
