@@ -23,7 +23,7 @@ import MainDrawerStyle from "./MainDrawerStyle.js";
 import MainDrawerStyleMobile from "./MainDrawerStyleMobile.js";
 
 // Perfil
-import FotoPerfil from '../../assets/perfil.jpg';
+import FotoPerfil from '../../assets/perfil.png';
 
 //Config
 import { useDevice } from '../../app/DeviceContext.jsx';
